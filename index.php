@@ -4,7 +4,7 @@
     $GLOBALS['config'] = array(
         "appName" => "phpFramework",
         "version" => "0.0.1",
-        "domain" => 'phpframework.com',
+        "domain" => 'localhost:8080',
         "path" => array(
             "app" => "app/",
             "core" => "core/",
