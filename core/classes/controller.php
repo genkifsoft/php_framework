@@ -1,8 +1,7 @@
 <?php
     class controller {
-        
-        function index() {
-            echo 123;die;
+        function __construct() {
+            $GLOBALS["instances"][] = $this;
         }
     }
 ?>

@@ -2,7 +2,8 @@
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
     $GLOBALS['config'] = array(
-        "addName" => "phpFramework",
+        "appName" => "phpFramework",
+        "version" => "0.0.1",
         "domain" => 'phpframework.com',
         "path" => array(
             "app" => "app/",
@@ -21,7 +22,7 @@
             "name" => ""
         )
     );
-
+    $GLOBALS["instances"] = array();
     require_once $GLOBALS['config']['path']['core']."autoload.php";
     new router();
 ?>
