@@ -1,13 +1,9 @@
 <?php
-class main extends controller {
+class main extends controller implements controllerInterface {
     
     public function index() {
-        
-        print_r($this->da);
-    }
-
-    function foo() {
-        echo "main foo";
+        $data['text'] = 123;
+        load::view("main::index", $data);
     }
 }
 ?>
