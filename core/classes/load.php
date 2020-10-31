@@ -7,8 +7,12 @@ class load {
             $viewFile .= ".php";
         }
         $viewFile = str_replace("::", "/", $viewFile);
-
-        require_once $GLOBALS["config"]["path"]["app"]."views/". $viewFile;
+        $filename = $GLOBALS["config"]["path"]["app"]."views/{$viewFile}";
+        if (file_exists($filename)) {
+            require_once $filename;
+        } else {
+            die("Trying to load None exitsting view");
+        }
     }
 }
 ?>

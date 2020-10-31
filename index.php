@@ -5,8 +5,10 @@
         "appName" => "phpFramework",
         "version" => "0.0.1",
         "domain" => 'localhost:8080',
+        "cache_enabled" => true,
         "path" => array(
             "app" => "app/",
+            "cache" => "caches/",
             "core" => "core/",
             "session" => "/app/sessions",
             "index" => "index.php"

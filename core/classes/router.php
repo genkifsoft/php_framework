@@ -26,11 +26,7 @@
         }
 
         private static function uri($part) {
-            $parts = explode("/", $_SERVER["REQUEST_URI"]);
-            if ($parts[1] == $GLOBALS["config"]["path"]["index"]){
-                $part++;
-            }
-            return (isset($parts[$part])) ? $parts[$part] : "";
+            return url::part($part);
         }
 
         private function findRoute() {
