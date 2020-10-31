@@ -8,6 +8,7 @@
         "path" => array(
             "app" => "app/",
             "core" => "core/",
+            "session" => "/app/sessions",
             "index" => "index.php"
         ),
         "defaults" => array(
@@ -16,12 +17,14 @@
         ),
         "routers" => array(),
         "database" => array(
-            "host" => "localhost",
-            "username" => "",
+            "host" => "127.0.0.1",
+            "username" => "root",
             "password" => "",
-            "name" => ""
+            "name" => "test"
         )
     );
+
+    date_default_timezone_set('Asia/Ho_Chi_Minh');
     $GLOBALS["instances"] = array();
     require_once $GLOBALS['config']['path']['core']."autoload.php";
     new router();

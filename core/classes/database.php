@@ -42,6 +42,7 @@
                     $argsBkp = $args;
                     $args = array($argsBkp);
                 }
+
                 if($stmt = $this->obj->prepare($query)){
                     $datatypes = "";
                     foreach($args as $value){

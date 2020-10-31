@@ -1,6 +1,10 @@
 <?php
 class session {
     function __construct() {
+        $bashSession = $_SERVER['DOCUMENT_ROOT'];
+        ini_set('session.save_handler', 'files');
+        ini_set('session.save_path', $bashSession . $GLOBALS["config"]["path"]["session"]);
+
         if (!isset($_SESSION)) {
             session_start();
         }
@@ -24,6 +28,7 @@ class session {
                     $set = false;
                 }
             }
+            return $set;
         } else {
             $key = session::generateSessionKey($key);
             return isset($_SESSION[$key]);

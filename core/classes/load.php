@@ -7,6 +7,7 @@ class load {
             $viewFile .= ".php";
         }
         $viewFile = str_replace("::", "/", $viewFile);
+
         require_once $GLOBALS["config"]["path"]["app"]."views/". $viewFile;
     }
 }

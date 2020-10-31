@@ -10,7 +10,7 @@
         }
 
         static function get($key) {
-            return (isset($_GET[$key])) ? $_P_GETOST[$key] : false;
+            return (isset($_GET[$key])) ? $_GET[$key] : false;
         }
 
         static function request($key) {
@@ -34,7 +34,7 @@
                 $append .= ($append == "") ? "?" : "&";
                 $append .= urlencode($key)."=".urlencode($param);
             }
-            return $prefix.$x;
+            return $prefix;
         }
         
         static function simple($url){
